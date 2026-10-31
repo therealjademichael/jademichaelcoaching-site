@@ -1,0 +1,4 @@
+# Static site: no build step. Netlify publishes the site/ folder as-is.
+# README.md and CLAUDE.md stay at the repo root so they are not served.
+[build]
+  publish = "site"
