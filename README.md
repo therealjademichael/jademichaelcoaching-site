@@ -30,10 +30,10 @@ privacy.html, terms.html   Placeholders
 
 site.config.js        EVERY editable value: offer name, prices, links, email, flags
 assets/css/style.css  All styles. Theme colors are at the top.
-assets/js/boot.js     Sets the theme before the page paints
-assets/js/site.js     Header, footer, config wiring, theme toggle, the little magic
+assets/js/boot.js     Flags that JS is on before the page paints
+assets/js/site.js     Header, footer, config wiring, the little magic
 assets/photos/        Photos (drop-in replacements)
-assets/img/           The line sketch (full lines + hair-only layer for the shimmer)
+assets/img/           The gold mark, favicons, and the retired line sketch
 ```
 
 ## Editing copy
@@ -62,29 +62,30 @@ Replace the file in `assets/photos/` with the same name and it's done.
 
 Portrait-ish images (about 4:5) look best. If a file goes missing, the frame shows a soft gradient placeholder instead of a broken image.
 
-## Themes
+## The brand
 
-Two complete palettes, sampled from Jade's photos, live at the top of `style.css`:
+The site follows Jade Michael Coaching Brand Guidelines v1.0 (10.30.26), in the Team Share Drive under `JMC Branding/02 Final`. Read them before any change to the look.
 
-- **A, "Golden Hour":** cream, ink, terracotta, sea-glass, gold
-- **B, "Night Chapel":** deep forest-ink, cream, candle-gold, sage, sea-glass
+- **One look, Moonstone Sand.** There is no theme switcher. Colors are at the top of `style.css`.
+- **Three fonts, all Google Fonts:** Cormorant Garamond (titles and italics), Marcellus (small spaced capitals only), Jost (reading and buttons). The font link repeats in the `<head>` of every page.
+- **Every word sits on an ivory card**, on the moonstone ground. Header and footer are black.
+- **The mark is always the original gold file** (`assets/img/jade-mark-gold.png`). Never recolor or redraw it.
+- **Doors:** Coaching on Ivory, Music on Sand, Fashion on Black.
+- **The moonstone ground tile isn't in the repo yet.** Until it is, the ground is plain Moonstone Ground. The line to swap is marked in `style.css`.
 
-The floating **Preview: A / B** toggle (bottom left) switches them and remembers the choice in the browser. **It's preview-only.** At launch, set `defaultTheme` in `site.config.js` to the winner and delete the block marked `PREVIEW ONLY` in `assets/js/site.js`.
+## The sketch
 
-## The sketch (bottom right)
-
-A line drawing of Jade (hair and sunglasses) floats in the bottom-right corner and links to the apply page. A few seconds after the page loads, and again on hover, gold shimmers down the hair and fades. To remove it, set `showSketch: false` in `site.config.js`.
+Retired in the guidelines (10.28.26), so `showSketch` is `false` in `site.config.js`.
 
 ## The little magic
 
-These are all in `site.js` and the bottom of `style.css`, and all of them turn off when a visitor's device asks for reduced motion:
+These are in `style.css` and `site.js`, and they all turn off when a visitor's device asks for reduced motion:
 
-- Ripple rings (a stone dropped in still water) in the hero and the dark bands
-- A gold shimmer that passes once through key italic words as they arrive (`.gold-moment`)
-- Golden motes drifting up through the hero and the closing band
-- Small stars that pop when you tap a button
-- A thin gold progress line along the top while you scroll
-- In Night Chapel, a soft candle glow breathing behind the hero
+- Prism light leaks at the left and right edges of the homepage hero
+- A sand shimmer that passes once through key italic words as they arrive (`.gold-moment`)
+- The rainbow line under the header, above the footer, and filling across the top as you scroll
+
+Retired in the guidelines: motes, film grain, candle glow, ripples and the stars on buttons.
 
 ## Guardrails (keep these when editing)
 
@@ -98,7 +99,6 @@ These are all in `site.js` and the bottom of `style.css`, and all of them turn o
 
 ## Still needs Jade
 
-- Theme A or B
 - Strike-through pass on all copy (she's reviewing this version)
 - The Holy Motherlover mission statement (drafted in her voice; marked DRAFT in the page)
 - Offer name (currently "1:1 Source Code Sessions") and package names ("The Four-Session Journey", "The Six-Month Container")
@@ -107,6 +107,5 @@ These are all in `site.js` and the bottom of `style.css`, and all of them turn o
 - More testimonials (two placeholder slots on Home), plus consent from Miles
 - The Lunacy #55 podcast link (and any other episodes to list)
 - Final Privacy and Terms language
-- Keep or drop the sketch
 - Holy Motherlover: spelling, her words for its page, and the future site address
 - Real music releases, videos and clips for Artistry (three "coming soon" slots)
