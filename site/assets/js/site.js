@@ -41,7 +41,7 @@
       '<a class="wordmark" href="index.html" aria-label="Jade Michael, home">' + WORDMARK + "</a>" +
       '<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span class="nav-toggle__bars" aria-hidden="true"></span>Menu</button>' +
       '<nav id="site-nav" class="nav" aria-label="Main"><ul>' + items + "</ul>" +
-      '<a class="btn btn--small" href="' + apply + '">Free connection call</a></nav></div>';
+      '<a class="btn btn--small" href="' + apply + '">Book a free connection call</a></nav></div>';
 
     var toggle = header.querySelector(".nav-toggle");
     var nav = header.querySelector(".nav");
@@ -75,10 +75,10 @@
       footer.innerHTML =
         '<div class="container"><div class="footer__grid">' +
         '<div class="footer__brand"><a class="wordmark" href="index.html" aria-label="Jade Michael, home">' + WORDMARK + "</a><p>" + esc(S.tagline || "") + "</p></div>" +
-        '<div><p class="footer__h">Explore</p><ul class="footer__list">' + navList + '<li><a href="' + apply + '">Apply for a free connection call</a></li></ul></div>' +
+        '<div><p class="footer__h">Explore</p><ul class="footer__list">' + navList + '<li><a href="' + apply + '">Book a free connection call</a></li></ul></div>' +
         '<div><p class="footer__h">Connect</p><ul class="footer__list">' +
         '<li><a href="' + get("links.instagram") + '" target="_blank" rel="noopener">Instagram</a></li>' +
-        '<li><a href="' + get("links.substack") + '" target="_blank" rel="noopener">Holy Motherlover on Substack</a></li>' +
+        '<li><a href="' + get("links.substack") + '" target="_blank" rel="noopener">Musings on Substack</a></li>' +
         '<li><a href="mailto:' + esc(S.email) + '">' + esc(S.email) + "</a></li></ul></div>" +
         '<div><p class="footer__h">Fine print</p><ul class="footer__list">' +
         '<li><a href="care.html">Care &amp; Fit</a></li><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li><li><a href="links.html">Links</a></li></ul></div>' +
@@ -122,7 +122,7 @@
         '<p class="offer__summary">' + esc(o.summary) + "</p>" +
         "<ul>" + o.includes.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + "</ul>" +
         priceHTML(o) +
-        '<a class="btn" href="' + apply + '">Apply for a free connection call</a></article>';
+        '<a class="btn" href="' + apply + '">Book a free connection call</a></article>';
     }).join("");
   });
   doc.querySelectorAll("[data-podcasts]").forEach(function (list) {
@@ -199,7 +199,7 @@
     var fab = doc.createElement("a");
     fab.className = "sketch-fab";
     fab.href = apply;
-    fab.setAttribute("aria-label", S.sketchLabel || "Apply for a free connection call");
+    fab.setAttribute("aria-label", S.sketchLabel || "Book a free connection call");
     // plain <img> layers (not CSS masks) so it also shows when a page is opened straight from disk
     fab.innerHTML =
       '<span class="sketch-fab__art" aria-hidden="true">' +

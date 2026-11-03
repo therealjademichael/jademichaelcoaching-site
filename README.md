@@ -13,11 +13,11 @@ Don't touch any domain or DNS until Jade signs off.
 ## File layout
 
 ```
-index.html            Landing: Jade's photo, "Coach · Artist · Cultural Architect", three doors (Coaching, Music, Culture)
+index.html            Landing: Jade's photo, "Coach · Artist", three doors (Coaching, Music, Fashion)
 coaching.html         Coaching: her message, Neurosovereignty, the Costa Rica initiation, Source Code, offers
-artistry.html         Artistry: Music + Culture doors, latest release, the feed, Holy Motherlover card
+artistry.html         Artistry: Music + Fashion doors, latest release, the feed, Holy Motherlover card
 feed.js               Jade's Artistry feed (newest post at the top)
-holy-mother-lover.html  Culture landing that will link to the future Holy Motherlover site
+holy-mother-lover.html  Fashion landing that will link to the future Holy Motherlover site
 source-code.html      The method, credited to Dr. Sam Rader
 session.html          The 7 steps of a session
 work-with-jade.html   Packages + how we begin
@@ -55,7 +55,7 @@ Replace the file in `assets/photos/` with the same name and it's done.
 | File | Where it shows | Current photo |
 |---|---|---|
 | `hero.jpg` | Landing photo | Red sandstone, looking up and away |
-| `kimono.jpg` | Culture door, Coaching "initiation" | Green kimono on the clifftop |
+| `kimono.jpg` | Fashion door, Coaching "initiation" | Green kimono on the clifftop |
 | `meet-jade.jpg` | Coaching door | Smiling by the ocean |
 | `about-1.jpg` | Coaching hero, About, Source Code | Pebble beach, sandstone cliff |
 | `about-2.jpg` | Music door, Artistry hero, About, Links avatar | Black hat, gold choker |

@@ -6,10 +6,9 @@
 window.SITE = {
   brand: "Jade Michael",
   business: "Jade Michael Coaching",
-  tagline: "Artistry of consciousness. Connecting you to God within.",
-  roles: ["Coach", "Artist", "Cultural Architect"],
+  tagline: "The artistry of consciousness.",
+  roles: ["Coach", "Artist"],
 
-  // PLACEHOLDER: confirm spelling with Jade ("Holy Motherlover" vs "Holy Mother Lover")
   hmlName: "Holy Motherlover",
 
   // PLACEHOLDER: the name of the 1:1 offer
@@ -27,7 +26,7 @@ window.SITE = {
   // The little line sketch (hair + sunglasses) floating in the bottom-right corner.
   // Click it and you land on the apply page. Set to false to remove it everywhere.
   showSketch: true,
-  sketchLabel: "Hey love. Apply for a free connection call",
+  sketchLabel: "Hey love. Book a free connection call",
 
   links: {
     apply: "apply.html",
