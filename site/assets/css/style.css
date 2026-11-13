@@ -603,10 +603,10 @@ strong { font-weight: 600; }
 .landing__media { position: relative; min-height: 62svh; overflow: hidden; background: var(--photo-ph); }
 .landing__media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 24%; animation: slow-settle 16s var(--ease) both; }
 @keyframes slow-settle { from { transform: scale(1.07); } to { transform: scale(1); } }
-.landing__media::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 62%, var(--bg) 100%); }
+.landing__media { -webkit-mask-image: linear-gradient(180deg, black 62%, transparent 100%); mask-image: linear-gradient(180deg, black 62%, transparent 100%); }
 @media (min-width: 900px) {
   .landing__media { min-height: 0; }
-  .landing__media::after { background: linear-gradient(90deg, transparent 72%, color-mix(in srgb, var(--bg) 70%, transparent) 100%); }
+  .landing__media { -webkit-mask-image: linear-gradient(90deg, black 72%, rgb(0 0 0 / 0.3) 100%); mask-image: linear-gradient(90deg, black 72%, rgb(0 0 0 / 0.3) 100%); }
 }
 .landing__copy { position: relative; display: flex; flex-direction: column; justify-content: center; padding: clamp(1rem, 5vw, 5rem) var(--gutter) clamp(3rem, 6vw, 5rem); z-index: 1; }
 @media (min-width: 900px) { .landing__copy { padding-left: clamp(2.5rem, 5vw, 5.5rem); } }
@@ -738,9 +738,8 @@ strong { font-weight: 600; }
   font-family: var(--font-label); font-weight: 400; letter-spacing: 0.32em; text-transform: uppercase;
 }
 
-/* The ground. When the moonstone tile is in the repo, it goes here:
-   background: var(--bg) url("assets/img/moonstone-ground.jpg") 0 0 / 900px 900px; */
-body { background: var(--bg); }
+/* The ground: the moonstone tile from Guidelines v1.0, repeated at 900 x 900 over Moonstone Ground */
+body { background: var(--bg) url("../img/moonstone-ground.jpg") 0 0 / 900px 900px; }
 
 /* Every word sits on an ivory card */
 .section { padding-block: clamp(0.7rem, 1.6vw, 1.25rem); }

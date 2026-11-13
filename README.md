@@ -71,7 +71,7 @@ The site follows Jade Michael Coaching Brand Guidelines v1.0 (10.30.26), in the 
 - **Every word sits on an ivory card**, on the moonstone ground. Header and footer are black.
 - **The mark is always the original gold file** (`assets/img/jade-mark-gold.png`). Never recolor or redraw it.
 - **Doors:** Coaching on Ivory, Music on Sand, Fashion on Black.
-- **The moonstone ground tile isn't in the repo yet.** Until it is, the ground is plain Moonstone Ground. The line to swap is marked in `style.css`.
+- **The moonstone ground** is `assets/img/moonstone-ground.jpg`, repeated at 900 by 900 over Moonstone Ground. It was recovered from the released Guidelines PDF; swap in the original file from `JMC Branding/06 Textures` if one is filed there.
 
 ## The sketch
 
