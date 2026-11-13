@@ -54,7 +54,9 @@ Replace the file in `assets/photos/` with the same name and it's done.
 
 | File | Where it shows | Current photo |
 |---|---|---|
-| `hero.jpg` | Landing photo | Red sandstone, looking up and away |
+| `hero.jpg` | Landing photo | Golden light by the sea, hand in her hair (film) |
+| `door-coaching.jpg` | Coaching door | Laughing on the sea rock, all in white |
+| `door-music.jpg` | Music door | Red sandstone, looking up and away |
 | `kimono.jpg` | Culture door, Coaching "initiation" | Green kimono on the clifftop |
 | `meet-jade.jpg` | Coaching door | Smiling by the ocean |
 | `about-1.jpg` | Coaching hero, About, Source Code | Pebble beach, sandstone cliff |
