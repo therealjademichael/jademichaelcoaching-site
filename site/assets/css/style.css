@@ -24,7 +24,7 @@
   --band-ink: #f5f2ec;
   --band-soft: #c8beb4;       /* White Stone: fine print on black */
   --band-accent: #c4a882;
-  --card: rgba(245, 242, 236, 0.88);
+  --card: rgba(245, 242, 236, 0.72);  /* more moonstone (Jade, 11.13.26); below 0.7 Deep Sand drops under AA */
   --card-edge: color-mix(in srgb, var(--sand) 45%, transparent);
   /* The rainbow glints live only as light, never as solid color */
   --rainbow: linear-gradient(90deg, #cdbfe8, #efc4cf, #f2dda6, #bfe3d0, #bbd3ee);
@@ -633,24 +633,24 @@ strong { font-weight: 600; }
 /* ---------- Doors ---------- */
 .doors-grid { display: grid; gap: clamp(1.5rem, 4vw, 3rem); margin-top: 3rem; }
 @media (min-width: 760px) { .doors-grid { grid-template-columns: 1fr 1fr; } }
+/* each door is one arch-shaped tile: its photo at the top, its words below, on the door's own color */
 .door {
-  --door-bg: var(--surface); --door-ink: var(--ink); --door-soft: var(--ink-soft); --door-accent: var(--accent); --door-edge: var(--card-edge);
-  position: relative; display: block; text-decoration: none; color: var(--door-ink);
+  --door-bg: var(--surface); --door-ink: var(--ink); --door-soft: var(--ink-soft); --door-accent: var(--accent);
+  position: relative; display: flex; flex-direction: column; text-decoration: none; color: var(--door-ink);
+  background: var(--door-bg); border: 1.5px solid var(--gold); border-radius: 999px 999px var(--radius) var(--radius);
+  overflow: hidden; box-shadow: var(--shadow); isolation: isolate;
 }
-.door:nth-child(2) { --door-bg: var(--sand); --door-ink: var(--band-bg); --door-soft: var(--band-bg); --door-accent: var(--band-bg); --door-edge: transparent; }
-.door:nth-child(3) { --door-bg: var(--band-bg); --door-ink: var(--band-ink); --door-soft: var(--band-soft); --door-accent: var(--band-accent); --door-edge: transparent; }
-.door__arch {
-  position: relative; aspect-ratio: 4 / 5; overflow: hidden; background: var(--photo-ph);
-  border-radius: 999px 999px var(--radius) var(--radius); border: 1.5px solid var(--gold); box-shadow: var(--shadow); isolation: isolate;
-}
+.door:nth-child(2) { --door-bg: var(--sand); --door-ink: var(--band-bg); --door-soft: var(--band-bg); --door-accent: var(--band-bg); }
+.door:nth-child(3) { --door-bg: var(--band-bg); --door-ink: var(--band-ink); --door-soft: var(--band-soft); --door-accent: var(--band-accent); }
+.door__arch { position: relative; aspect-ratio: 4 / 5; overflow: hidden; background: var(--photo-ph); }
 .door__arch img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.4s var(--ease); }
 .door__arch::before {
   content: ""; position: absolute; inset: 10px; z-index: 2; pointer-events: none;
-  border-radius: 999px 999px calc(var(--radius) - 8px) calc(var(--radius) - 8px);
+  border-radius: 999px 999px 0 0;
   border: 1.5px solid var(--gold); opacity: 0; transform: scale(0.97);
   transition: opacity 0.6s var(--ease), transform 0.8s var(--ease);
 }
-.door__label { margin-top: 0.9rem; padding: clamp(1.5rem, 3.5vw, 2.6rem); border-radius: var(--radius); background: var(--door-bg); border: 1px solid var(--door-edge); }
+.door__label { flex: 1; padding: clamp(1.5rem, 3.5vw, 2.6rem); }
 .door__num { font: italic 400 1.1rem var(--font-display); color: var(--door-accent); }
 .door h2, .door .h2-door { color: var(--door-ink); font-size: var(--step-4); margin: 0.05em 0 0.15em; }
 .door p { margin: 0; color: var(--door-soft); max-width: 22em; }
