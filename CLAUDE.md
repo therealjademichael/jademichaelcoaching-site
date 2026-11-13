@@ -1,6 +1,6 @@
 # CLAUDE.md — Jade Michael Coaching site
 
-Read `README.md` first: it covers the file layout, how to edit copy, how to swap photos and the theme toggle.
+Read `README.md` first: it covers the file layout, how to edit copy, how to swap photos and the brand system.
 
 All site files live in `site/`. Paths below (`site.config.js`, `assets/...`) are relative to that folder.
 
@@ -31,6 +31,5 @@ Jade's two registers at once: playful and street ("come play in the quantum," "b
 
 ## Before launch
 
-1. Pick the theme: set `defaultTheme` and delete the `PREVIEW ONLY` block in `site.js`.
-2. Remove `noindex` from every page and delete `_headers`.
-3. Decide on `showPrices` and `showSketch`.
+1. Remove `noindex` from every page and delete `_headers`.
+2. Decide on `showPrices`.

@@ -1,6 +1,6 @@
 /*
-  site.js — shared header + footer, wiring to site.config.js, the preview
-  theme toggle, and the little magic. Everything decorative here is optional:
+  site.js — shared header + footer, wiring to site.config.js and the little
+  magic. Everything decorative here is optional:
   the pages read fine without it.
 */
 (function () {
@@ -16,12 +16,10 @@
       return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c];
     });
   }
-  var STAR_PATH = "M12 0C12.8 7.2 16.8 11.2 24 12 16.8 12.8 12.8 16.8 12 24 11.2 16.8 7.2 12.8 0 12 7.2 11.2 11.2 7.2 12 0Z";
-  var MARK =
-    '<svg class="wordmark__mark" viewBox="0 0 32 32" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.2">' +
-    '<circle cx="16" cy="16" r="6"/><circle cx="16" cy="16" r="10.5" opacity=".55"/><circle cx="16" cy="16" r="15" opacity=".28"/>' +
-    '<path fill="currentColor" stroke="none" d="M16 11.4c.3 2.5 1.6 3.8 4.1 4.1-2.5.3-3.8 1.6-4.1 4.1-.3-2.5-1.6-3.8-4.1-4.1 2.5-.3 3.8-1.6 4.1-4.1z"/></svg>';
-  var WORDMARK = MARK + "<span>Jade <em>Michael</em></span>";
+  var WORDMARK =
+    '<img class="wordmark__mark" src="assets/img/jade-mark-gold.png" width="320" height="220" alt="">' +
+    '<span class="wordmark__text"><span>Jade <em>Michael</em></span>' +
+    '<span class="wordmark__title">' + esc(S.titleLine || "") + "</span></span>";
   var apply = get("links.apply") || "apply.html";
 
   var here = (location.pathname.split("/").pop() || "index").replace(/\.html$/, "") || "index";
@@ -168,32 +166,6 @@
     img.addEventListener("error", miss);
   });
 
-  /* ---------- PREVIEW ONLY: theme toggle. Remove this block at launch. ---------- */
-  var root = doc.documentElement;
-  var tt = doc.createElement("div");
-  tt.className = "theme-toggle";
-  tt.setAttribute("role", "group");
-  tt.setAttribute("aria-label", "Preview theme");
-  tt.innerHTML = "<span>Preview:</span>" +
-    '<button type="button" data-theme-set="a" title="Theme A: Golden Hour">A</button>' +
-    '<button type="button" data-theme-set="b" title="Theme B: Night Chapel">B</button>';
-  doc.body.appendChild(tt);
-  function syncTheme() {
-    tt.querySelectorAll("button").forEach(function (b) {
-      b.setAttribute("aria-pressed", String(b.getAttribute("data-theme-set") === root.getAttribute("data-theme")));
-    });
-  }
-  tt.addEventListener("click", function (e) {
-    var b = e.target.closest("button");
-    if (!b) return;
-    var t = b.getAttribute("data-theme-set");
-    root.setAttribute("data-theme", t);
-    try { localStorage.setItem("jmc-theme", t); } catch (err) {}
-    syncTheme();
-  });
-  syncTheme();
-  /* ---------- end preview-only block ---------- */
-
   /* ---------- The sketch: hair + sunglasses, bottom-right ---------- */
   if (S.showSketch) {
     var fab = doc.createElement("a");
@@ -224,7 +196,7 @@
     }
   }
 
-  /* ---------- Magic: scroll progress hairline ---------- */
+  /* ---------- Magic: the rainbow line fills as you scroll ---------- */
   var bar = doc.createElement("div");
   bar.className = "progress";
   bar.setAttribute("aria-hidden", "true");
@@ -241,7 +213,7 @@
     return;
   }
 
-  /* ---------- Magic: reveals (+ one-time gold shimmer on .gold-moment words) ---------- */
+  /* ---------- Magic: reveals (+ one-time sand shimmer on .gold-moment words) ---------- */
   var watched = doc.querySelectorAll("[data-reveal], .gold-moment");
   if ("IntersectionObserver" in window) {
     var io = new IntersectionObserver(function (entries) {
@@ -270,38 +242,4 @@
     clearTimeout(sweepTimer);
     sweepTimer = setTimeout(sweep, 120);
   }, { passive: true });
-
-  /* ---------- Magic: quantum motes rising in [data-motes] ---------- */
-  doc.querySelectorAll("[data-motes]").forEach(function (box) {
-    var n = parseInt(box.getAttribute("data-motes"), 10) || 14;
-    for (var i = 0; i < n; i++) {
-      var m = doc.createElement("span");
-      m.className = "mote";
-      var size = 2 + Math.random() * 3.5;
-      m.style.cssText = "left:" + (Math.random() * 100) + "%;width:" + size + "px;height:" + size + "px;" +
-        "animation-duration:" + (14 + Math.random() * 16) + "s;animation-delay:" + (-Math.random() * 24) + "s;" +
-        "--drift:" + (Math.random() * 60 - 30) + "px;";
-      box.appendChild(m);
-    }
-  });
-
-  /* ---------- Magic: a few stars pop when you tap a button ---------- */
-  doc.addEventListener("click", function (e) {
-    var t = e.target.closest(".btn, .link-btn, .sketch-fab");
-    if (!t || e.clientX === 0) return;
-    for (var i = 0; i < 7; i++) {
-      var s = doc.createElementNS("http://www.w3.org/2000/svg", "svg");
-      s.setAttribute("viewBox", "0 0 24 24");
-      s.setAttribute("class", "spark-pop");
-      s.innerHTML = '<path d="' + STAR_PATH + '"/>';
-      var ang = (Math.PI * 2 * i) / 7 + Math.random() * 0.5;
-      var dist = 26 + Math.random() * 26;
-      s.style.left = e.clientX + "px";
-      s.style.top = e.clientY + "px";
-      s.style.setProperty("--dx", Math.cos(ang) * dist + "px");
-      s.style.setProperty("--dy", Math.sin(ang) * dist + "px");
-      doc.body.appendChild(s);
-      setTimeout(function (el) { el.remove(); }, 900, s);
-    }
-  });
 })();
