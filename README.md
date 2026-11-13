@@ -55,6 +55,7 @@ Replace the file in `assets/photos/` with the same name and it's done.
 | File | Where it shows | Current photo |
 |---|---|---|
 | `hero.jpg` | Landing photo | Golden light by the sea, hand in her hair (film) |
+| `door-fashion.jpg` | Fashion door | Holy Motherlover tank against a black wall |
 | `door-coaching.jpg` | Coaching door | Laughing on the sea rock, all in white |
 | `door-music.jpg` | Music door | Red sandstone, looking up and away |
 | `kimono.jpg` | Culture door, Coaching "initiation" | Green kimono on the clifftop |
