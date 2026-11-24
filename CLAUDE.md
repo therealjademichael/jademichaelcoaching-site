@@ -9,7 +9,7 @@ All site files live in `site/`. Paths below (`site.config.js`, `assets/...`) are
 - Static HTML + `assets/css/style.css` + vanilla JS. No framework, no build step, no npm. Keep it that way.
 - Values that repeat across pages (links, emails, prices, offer names, nav, podcasts, disclaimer) live in `site.config.js`. Change them there, not in the HTML.
 - Header and footer are rendered by `assets/js/site.js` from the config. Don't paste them into pages.
-- Reuse the existing CSS classes. Colors come from CSS custom properties; never hard-code a hex in a page.
+- Reuse the existing CSS classes. Colors and fonts come from CSS custom properties in `assets/css/brand.css`; never hard-code a hex or a font in a page.
 - Every page keeps `<meta name="robots" content="noindex, nofollow">` until launch.
 - Accessibility: semantic HTML, alt text on every photo, visible focus, AA contrast, and everything decorative off under `prefers-reduced-motion`.
 

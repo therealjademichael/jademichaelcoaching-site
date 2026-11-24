@@ -30,6 +30,10 @@ const PROTECTED = [
 
 // The Artistry feed is Jade's to post in. A post may link or embed from these places only;
 // a link anywhere else is plumbing.
+// The brand file is Jade's: colors, fonts and the Google Fonts line that loads them.
+const BRAND = /^site\/assets\/css\/brand\.css$/;
+const FONT_HOSTS = /^https:\/\/fonts\.(googleapis|gstatic)\.com\//i;
+
 const FEED = /^site\/feed\.js$/;
 const FEED_HOSTS = /^https:\/\/([a-z0-9-]+\.)*(spotify\.com|youtube\.com|youtu\.be|youtube-nocookie\.com|instagram\.com|substack\.com|soundcloud\.com|music\.apple\.com|vimeo\.com|tiktok\.com)(\/|$)/i;
 
@@ -77,6 +81,13 @@ for (const line of changed) {
     const was = new Set(before);
     const odd = after.filter((t) => !was.has(t) && t.startsWith("url:") && !FEED_HOSTS.test(t.slice(4)));
     if (odd.length) problems.push(`${file}: a feed post links somewhere new (${odd.map((t) => t.slice(4)).join(", ")})`);
+    continue;
+  }
+  if (BRAND.test(file)) {
+    // A new font from Google Fonts is painting; any other new address is plumbing.
+    const was = new Set(before);
+    const odd = after.filter((t) => !was.has(t) && !(t.startsWith("url:") && FONT_HOSTS.test(t.slice(4))));
+    if (odd.length) problems.push(`${file}: something other than a Google Fonts address was added (${odd.map((t) => t.slice(t.indexOf(":") + 1)).join(", ")})`);
     continue;
   }
   if (before.join("\n") !== after.join("\n")) problems.push(`${file}: a link, price, form, script, email address or site switch changed`);
