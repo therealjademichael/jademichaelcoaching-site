@@ -29,6 +29,10 @@ Jade's two registers at once: playful and street ("come play in the quantum," "b
 - Don't build a form. The intake form is monday.com, and booking is TidyCal (URLs in `site.config.js`).
 - Don't touch domains or DNS, and don't deploy to production without Jade's go-ahead.
 
+## Publishing: painting vs plumbing
+
+Read `EDITING.md`. Every pull request gets a **Plumbing check**. Green ("Painting only") means Jade can have it merged after she has seen the preview and said yes. Red ("Plumbing change") waits for Woody: send it to him in Slack as a "Plumbing request for Woody". Never push straight to `main`, and never edit `.github/`.
+
 ## Before launch
 
 1. Pick the theme: set `defaultTheme` and delete the `PREVIEW ONLY` block in `site.js`.

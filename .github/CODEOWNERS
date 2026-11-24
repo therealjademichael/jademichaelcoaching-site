@@ -1,0 +1,7 @@
+# Plumbing files: Woody is asked to review any change to these.
+/site/assets/js/     @wvhhospitality
+/site/site.config.js @wvhhospitality
+/site/_headers       @wvhhospitality
+/netlify.toml        @wvhhospitality
+/CLAUDE.md           @wvhhospitality
+/.github/            @wvhhospitality
