@@ -38,8 +38,8 @@ window.SITE = {
     substack: "https://jademichael.substack.com",
     music: "https://open.spotify.com/track/3w2lPV3MOQwv8n4LyDziYl",
     musicEmbed: "https://open.spotify.com/embed/track/3w2lPV3MOQwv8n4LyDziYl?utm_source=generator",
-    // PLACEHOLDER: the future Holy Motherlover website. Leave empty until it exists.
-    hmlSite: ""
+    // The Holy Motherlover website. The Fashion door and the footer link go here.
+    hmlSite: "https://holymotherlover.com"
   },
 
   // PLACEHOLDER: package names are working titles
@@ -83,7 +83,7 @@ window.SITE = {
     { label: "Source Code", href: "source-code.html" },
     { label: "Your Session", href: "session.html" },
     { label: "Work With Jade", href: "work-with-jade.html" },
-    { label: "Holy Motherlover", href: "holy-mother-lover.html" }
+    { label: "Holy Motherlover", href: "https://holymotherlover.com" }
   ],
 
   // PLACEHOLDER: episode links not collected yet. Add a url and it becomes a link.

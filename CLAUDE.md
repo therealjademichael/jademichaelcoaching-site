@@ -23,7 +23,7 @@ Jade's two registers at once: playful and street ("come play in the quantum," "b
 - The OCD story stays first person, on About only. The site never claims sessions treat any condition.
 - Credit Source Code to Dr. Sam Rader wherever the method is explained. No 12 pattern names, no "Solvent," no reproduction of Dr. Sam's materials.
 - No client session content. Only Miles's public testimonial, and confirm consent before launch.
-- No Holy Motherlover apparel store. No links or products from former partners. No crisis-line section or 988/911 links (Jade's call).
+- No Holy Motherlover store or products on this site. The Fashion door and the footer link go to holymotherlover.com, which is its own site. No links or products from former partners. No crisis-line section or 988/911 links (Jade's call).
 - Jade is the creator (not co-creator) of Neurosovereignty.
 - Artistry feed posts go in `feed.js`, newest first.
 - Don't build a form. The intake form is monday.com, and booking is TidyCal (URLs in `site.config.js`).
