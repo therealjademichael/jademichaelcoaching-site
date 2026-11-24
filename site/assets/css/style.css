@@ -2,40 +2,10 @@
    Jade Michael Coaching — one stylesheet for the whole site
    Moonstone Sand, from Brand Guidelines v1.0 (10.30.26).
    One look, no theme switcher. Pages never hard-code a hex.
+   Colors and fonts live in brand.css, which every page loads first.
    ========================================================= */
 
 :root {
-  --bg: #eee9e2;              /* Moonstone Ground */
-  --bg-alt: #eee9e2;
-  --surface: #f5f2ec;         /* Ivory */
-  --ink: #121110;             /* Black: titles, her name */
-  --ink-soft: #3d3d3d;        /* Graphite: paragraphs */
-  --muted: #3d3d3d;
-  --accent: #7d6849;          /* Deep Sand: accent words and small capitals on ivory */
-  --secondary: #7d6849;
-  --gold: #ceb993;            /* Ring Gold: fine lines, the photo arch. Never words on ivory */
-  --sand: #c4a882;            /* Sand: lives on black and as fills. Never words on ivory */
-  --button: #121110;
-  --button-hover: #3d3d3d;
-  --on-button: #f5f2ec;
-  --line: rgba(18, 17, 16, 0.14);
-  --shadow: 0 30px 60px -30px rgba(18, 17, 16, 0.28);
-  --band-bg: #121110;
-  --band-ink: #f5f2ec;
-  --band-soft: #c8beb4;       /* White Stone: fine print on black */
-  --band-accent: #c4a882;
-  --card: rgba(245, 242, 236, 0.72);  /* more moonstone (Jade, 11.13.26); below 0.7 Deep Sand drops under AA */
-  --card-edge: color-mix(in srgb, var(--sand) 45%, transparent);
-  /* The rainbow glints live only as light, never as solid color */
-  --rainbow: linear-gradient(90deg, #cdbfe8, #efc4cf, #f2dda6, #bfe3d0, #bbd3ee);
-  --photo-ph: linear-gradient(160deg, #eee9e2 0%, #ceb993 55%, #c8beb4 100%);
-  color-scheme: light;
-}
-
-:root {
-  --font-display: "Cormorant Garamond", "Iowan Old Style", Georgia, serif;
-  --font-label: "Marcellus", "Cormorant Garamond", Georgia, serif;
-  --font-body: "Jost", "Avenir Next", system-ui, sans-serif;
   --step--1: clamp(0.84rem, 0.81rem + 0.15vw, 0.93rem);
   --step-0: clamp(1rem, 0.96rem + 0.2vw, 1.125rem);
   --step-1: clamp(1.18rem, 1.08rem + 0.5vw, 1.45rem);

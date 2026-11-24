@@ -9,7 +9,8 @@ Words, pictures, colors and styles.
 
 - the wording on any page
 - the words in `site/site.config.js` (tagline, offer descriptions, what's included)
-- colors, fonts and spacing (`site/assets/css/style.css`)
+- the brand: colors, fonts, logo and favicons (`site/assets/css/brand.css` explains each one)
+- spacing and layout styles (`site/assets/css/style.css`)
 - adding or swapping photos
 - posts in the Artistry feed (`site/feed.js`), with links to Spotify, YouTube, Instagram,
   Substack, SoundCloud, Apple Music, Vimeo or TikTok
