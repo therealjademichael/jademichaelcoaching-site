@@ -8,6 +8,8 @@ window.SITE = {
   business: "Jade Michael Coaching",
   tagline: "Artistry of consciousness. Connecting you to God within.",
   roles: ["Coach", "Artist", "Cultural Architect"],
+  // The title line in the logo lockups (Guidelines 02)
+  titleLine: "Coach \u00b7 Artist",
 
   // PLACEHOLDER: confirm spelling with Jade ("Holy Motherlover" vs "Holy Mother Lover")
   hmlName: "Holy Motherlover",
@@ -21,12 +23,9 @@ window.SITE = {
 
   email: "jade@jademichaelcoaching.com",
 
-  // Starting theme for first-time visitors: "a" (Golden Hour) or "b" (Night Chapel)
-  defaultTheme: "a",
-
   // The little line sketch (hair + sunglasses) floating in the bottom-right corner.
-  // Click it and you land on the apply page. Set to false to remove it everywhere.
-  showSketch: true,
+  // Retired in Guidelines v1.0 (10.28.26). Click it and you land on the apply page.
+  showSketch: false,
   sketchLabel: "Hey love. Apply for a free connection call",
 
   links: {
