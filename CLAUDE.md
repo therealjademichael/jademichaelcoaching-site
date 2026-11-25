@@ -1,4 +1,4 @@
-# CLAUDE.md — Jade Michael Coaching site
+# CLAUDE.md — Jade Michael Co LLC site (jademichael.co)
 
 Read `README.md` first: it covers the file layout, how to edit copy, how to swap photos and the brand system.
 
