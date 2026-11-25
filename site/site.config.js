@@ -5,7 +5,7 @@
 */
 window.SITE = {
   brand: "Jade Michael",
-  business: "Jade Michael Coaching",
+  business: "Jade Michael Co LLC",
   tagline: "The artistry of consciousness.",
   roles: ["Coach", "Artist"],
   // The title line in the logo lockups (Guidelines 02)
@@ -20,7 +20,7 @@ window.SITE = {
   showPrices: false,
   pricesHiddenText: "Investment shared on your free connection call.",
 
-  email: "jade@jademichaelcoaching.com",
+  email: "jade@jademichael.co",
 
   // The little line sketch (hair + sunglasses) floating in the bottom-right corner.
   // Retired in Guidelines v1.0 (10.28.26). Click it and you land on the apply page.

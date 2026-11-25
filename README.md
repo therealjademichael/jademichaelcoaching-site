@@ -1,4 +1,4 @@
-# Jade Michael Coaching — preview site
+# Jade Michael Co LLC — preview site
 
 A preview of Jade Michael's 1:1 Source Code sessions site. Plain HTML, one CSS file and a little vanilla JavaScript. There is no framework, no build step and no `npm install`. Drop the folder on any static host and it works.
 
@@ -67,7 +67,7 @@ Portrait-ish images (about 4:5) look best. If a file goes missing, the frame sho
 
 ## The brand
 
-The site follows Jade Michael Coaching Brand Guidelines v1.0 (10.30.26), in the Team Share Drive under `JMC Branding/02 Final`. Read them before any change to the look.
+The site follows the Jade Michael Brand Guidelines v1.0 (10.30.26), in the Team Share Drive under `JMC Branding/02 Final`. Read them before any change to the look.
 
 - **One look, Moonstone Sand.** There is no theme switcher. Colors are at the top of `style.css`.
 - **Three fonts, all Google Fonts:** Cormorant Garamond (titles and italics), Marcellus (small spaced capitals only), Jost (reading and buttons). The font link repeats in the `<head>` of every page.
