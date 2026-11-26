@@ -2,7 +2,7 @@
 
 A preview of Jade Michael's 1:1 Source Code sessions site. Plain HTML, one CSS file and a little vanilla JavaScript. There is no framework, no build step and no `npm install`. Drop the folder on any static host and it works.
 
-**This is a preview, not a launch.** Every page carries `noindex`, and `_headers` adds `X-Robots-Tag: noindex` on Netlify too.
+**Open to search engines since 11.25.26.** The `noindex` tags and the `_headers` file that hid the preview are gone; `robots.txt` and `sitemap.xml` point search engines at the pages.
 
 ## Deploy (Netlify)
 
