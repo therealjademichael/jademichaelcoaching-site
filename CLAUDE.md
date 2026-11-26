@@ -10,7 +10,7 @@ All site files live in `site/`. Paths below (`site.config.js`, `assets/...`) are
 - Values that repeat across pages (links, emails, prices, offer names, nav, podcasts, disclaimer) live in `site.config.js`. Change them there, not in the HTML.
 - Header and footer are rendered by `assets/js/site.js` from the config. Don't paste them into pages.
 - Reuse the existing CSS classes. Colors and fonts come from CSS custom properties in `assets/css/brand.css`; never hard-code a hex or a font in a page.
-- Every page keeps `<meta name="robots" content="noindex, nofollow">` until launch.
+- The site is open to search engines as of 11.25.26 (Woody's call). Don't add `noindex` back. The one exception is the retired `holy-mother-lover.html`, which stays hidden. A new page goes in `site/sitemap.xml`.
 - Accessibility: semantic HTML, alt text on every photo, visible focus, AA contrast, and everything decorative off under `prefers-reduced-motion`.
 
 ## Voice
@@ -35,5 +35,6 @@ Read `EDITING.md`. Every pull request gets a **Plumbing check**. Green ("Paintin
 
 ## Before launch
 
-1. Remove `noindex` from every page and delete `_headers`.
+1. Done 11.25.26: `noindex` removed and `_headers` deleted.
 2. Decide on `showPrices`.
+3. Confirm consent for Miles's testimonial.
